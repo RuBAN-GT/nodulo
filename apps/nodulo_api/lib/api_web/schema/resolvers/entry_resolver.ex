@@ -1,0 +1,10 @@
+defmodule Nodulo.ApiWeb.Schema.EntryResolver do
+
+  def list_entries(_parent, _args, _resolution) do
+    {:ok, Nodulo.Elisen.Factory.build_list(5, :entry)}
+  end
+
+  def get_entry(_parent, %{id: id}, _resolution) do
+    {:ok, Nodulo.Elisen.Factory.build(:entry, %{id: id})}
+  end
+end

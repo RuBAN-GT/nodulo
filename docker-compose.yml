@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: '.'
+      dockerfile: ./Dockerfile
+    environment:
+      DB__DATABASE: nodulo_data_prod
+      DB__HOSTNAME: db
+      DB__PORT: 5432
+      DB__USERNAME: postgres
+      DB__PASSWORD: postgres
+      MIX_ENV: prod
+    ports:
+      - '4000:4000'
+
+  db:
+    image: postgres:11
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@localhost
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - 8080:80
+    links:
+      - db

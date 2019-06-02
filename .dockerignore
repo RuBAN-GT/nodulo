@@ -1,0 +1,15 @@
+# Common
+.idea
+.vscode
+*.iml
+
+# Elixir
+_build/
+cover/
+deps/
+doc/
+.elixir_ls
+.fetch
+erl_crash.dump
+*.ez
+tmp
