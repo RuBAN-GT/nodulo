@@ -34,6 +34,7 @@ defmodule Nodulo.Api.MixProject do
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
       {:corsica, "~> 1.0"},
+      {:guardian, "~> 1.0"},
       {:phoenix, "~> 1.4.3"},
       {:phoenix_pubsub, "~> 1.1"},
       {:jason, "~> 1.0"},

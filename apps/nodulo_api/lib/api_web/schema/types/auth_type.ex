@@ -1,7 +1,7 @@
 defmodule Nodulo.ApiWeb.Schema.AuthType do
   use Absinthe.Schema.Notation
 
-  alias Nodulo.ApiWeb.Schema.UserResolver
+  alias Nodulo.ApiWeb.Schema.AuthResolver
 
   @desc "Secret data for successfuly user authentication"
   object :user_secrets do
@@ -26,13 +26,13 @@ defmodule Nodulo.ApiWeb.Schema.AuthType do
     @desc "Sign in operation"
     field :sign_in, non_null(:user_secrets) do
       arg :credentials, non_null(:user_credentials)
-      resolve &UserResolver.get_user/3
+      resolve &AuthResolver.sign_in/3
     end
 
     @desc "Sign up operation"
     field :sign_up, non_null(:user_secrets) do
       arg :params, non_null(:sign_up_params)
-      resolve &UserResolver.get_user/3
+      resolve &AuthResolver.sign_up/3
     end
   end
 end
