@@ -3,14 +3,26 @@ defmodule Nodulo.ApiWeb.Schema.UserType do
 
   alias Nodulo.ApiWeb.Schema.UserResolver
 
+  @desc "A common user definition"
+  interface :basic_user do
+    field :id, non_null(:id)
+    field :created_at, non_null(:string)
+    field :updated_at, non_null(:string)
+    field :email, non_null(:string)
+    field :name, :string
+  end
+
   @desc "A user configuration"
   object :user_setting do
     field :name, non_null(:string)
     field :value, :string
   end
 
-  @desc "A user information"
+  @desc "A system user information"
   object :user do
+    interface :basic_user
+    is_type_of :user
+
     field :id, non_null(:id)
     field :created_at, non_null(:string)
     field :updated_at, non_null(:string)
@@ -20,7 +32,10 @@ defmodule Nodulo.ApiWeb.Schema.UserType do
 
   @desc "An information about current user"
   object :current_user do
+    interface :basic_user
+    is_type_of :current_user
     import_fields :user
+
     field :settings, list_of(:user_setting)
   end
 

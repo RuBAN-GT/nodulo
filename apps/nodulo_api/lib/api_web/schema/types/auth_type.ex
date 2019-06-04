@@ -3,10 +3,9 @@ defmodule Nodulo.ApiWeb.Schema.AuthType do
 
   alias Nodulo.ApiWeb.Schema.UserResolver
 
-  @desc "Current user with related secrets"
-  object :auth_data do
+  @desc "Secret data for successfuly user authentication"
+  object :user_secrets do
     field :secret, non_null(:string)
-    field :user, non_null(:user)
   end
 
   @desc "Parameters required for sign up"
@@ -25,13 +24,13 @@ defmodule Nodulo.ApiWeb.Schema.AuthType do
 
   object :auth_mutations do
     @desc "Sign in operation"
-    field :sign_in, non_null(:auth_data) do
+    field :sign_in, non_null(:user_secrets) do
       arg :credentials, non_null(:user_credentials)
       resolve &UserResolver.get_user/3
     end
 
     @desc "Sign up operation"
-    field :sign_up, non_null(:current_user) do
+    field :sign_up, non_null(:user_secrets) do
       arg :params, non_null(:sign_up_params)
       resolve &UserResolver.get_user/3
     end
