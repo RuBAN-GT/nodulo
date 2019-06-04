@@ -5,6 +5,7 @@ defmodule Nodulo.ApiWeb.Schema do
 
   use Absinthe.Schema
 
+  import_types Nodulo.ApiWeb.Schema.AuthType
   import_types Nodulo.ApiWeb.Schema.EntryType
   import_types Nodulo.ApiWeb.Schema.UserType
 
@@ -14,7 +15,7 @@ defmodule Nodulo.ApiWeb.Schema do
   end
 
   mutation do
+    import_fields :auth_mutations
     import_fields :entry_mutations
-    import_fields :user_mutations
   end
 end
