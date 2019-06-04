@@ -1,15 +1,15 @@
-defmodule Nodulo.ApiWeb.Router do
-  use Nodulo.ApiWeb, :router
+defmodule Nodulo.ApiGql.Router do
+  use Nodulo.ApiGql, :router
 
   pipeline :graphql do
-    plug Nodulo.ApiWeb.Context
+    plug Nodulo.ApiGql.Context
   end
 
   scope "/graphql" do
     pipe_through :graphql
 
     forward "/", Absinthe.Plug.GraphiQL,
-      schema: Nodulo.ApiWeb.Schema,
+      schema: Nodulo.ApiGql.Schema,
       json_codec: Jason
   end
 end

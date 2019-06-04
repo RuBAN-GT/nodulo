@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.ChannelCase do
+defmodule Nodulo.ApiGql.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,7 +21,7 @@ defmodule Nodulo.ApiWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint Nodulo.ApiWeb.Endpoint
+      @endpoint Nodulo.ApiGql.Endpoint
     end
   end
 

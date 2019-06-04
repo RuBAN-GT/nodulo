@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.ConnCase do
+defmodule Nodulo.ApiGql.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,10 +19,10 @@ defmodule Nodulo.ApiWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias Nodulo.ApiWeb.Router.Helpers, as: Routes
+      alias Nodulo.ApiGql.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint Nodulo.ApiWeb.Endpoint
+      @endpoint Nodulo.ApiGql.Endpoint
     end
   end
 

@@ -1,8 +1,8 @@
-defmodule Nodulo.ApiWeb.Schema.EntryType do
+defmodule Nodulo.ApiGql.Schema.EntryType do
   use Absinthe.Schema.Notation
   import_types Absinthe.Plug.Types
 
-  alias Nodulo.ApiWeb.Schema.{EntryResolver}
+  alias Nodulo.ApiGql.Schema.{EntryResolver}
 
   @desc "A book property"
   object :entry_property do

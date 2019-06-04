@@ -8,5 +8,5 @@ use Mix.Config
 # file or create a script for recreating it, since it's
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
-config :nodulo_api, Nodulo.ApiWeb.Endpoint,
+config :nodulo_api, Nodulo.ApiGql.Endpoint,
   secret_key_base: "GF0MoTdubotwIfkxLTW7rjbXJA4KaWGqLFK2eEVS6/+wmxJt+dLt5DOjq54qqKK5"

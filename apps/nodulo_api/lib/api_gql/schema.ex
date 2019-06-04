@@ -1,12 +1,13 @@
-defmodule Nodulo.ApiWeb.Schema do
+defmodule Nodulo.ApiGql.Schema do
   @moduledoc """
   The GraphQL scheme for Absinthe
   """
 
   use Absinthe.Schema
 
-  import_types Nodulo.ApiWeb.Schema.EntryType
-  import_types Nodulo.ApiWeb.Schema.UserType
+  import_types Nodulo.ApiGql.Schema.AuthType
+  import_types Nodulo.ApiGql.Schema.EntryType
+  import_types Nodulo.ApiGql.Schema.UserType
 
   query do
     import_fields :entry_queries
@@ -14,7 +15,7 @@ defmodule Nodulo.ApiWeb.Schema do
   end
 
   mutation do
+    import_fields :auth_mutations
     import_fields :entry_mutations
-    import_fields :user_mutations
   end
 end

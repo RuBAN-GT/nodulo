@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.Schema.CommonResolver do
+defmodule Nodulo.ApiGql.Schema.CommonResolver do
 
   def empty_list(_parent, _args, _resolution) do
     {:ok, []}

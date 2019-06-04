@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.Endpoint do
+defmodule Nodulo.ApiGql.Endpoint do
   use Phoenix.Endpoint, otp_app: :nodulo_api
 
   plug Corsica,
@@ -7,7 +7,7 @@ defmodule Nodulo.ApiWeb.Endpoint do
     allow_methods: ["GET", "POST", "OPTIONS"],
     allow_headers: :all
 
-  socket "/socket", Nodulo.ApiWeb.UserSocket,
+  socket "/socket", Nodulo.ApiGql.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -46,5 +46,5 @@ defmodule Nodulo.ApiWeb.Endpoint do
     key: "_api_key",
     signing_salt: "on3e5JzY"
 
-  plug Nodulo.ApiWeb.Router
+  plug Nodulo.ApiGql.Router
 end

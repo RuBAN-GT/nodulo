@@ -5,7 +5,7 @@ defmodule Nodulo.Api.Application do
 
   def start(_type, _args) do
     children = [
-      Nodulo.ApiWeb.Endpoint
+      Nodulo.ApiGql.Endpoint
     ]
 
     opts = [strategy: :one_for_one, name: Nodulo.Api.Supervisor]
@@ -15,7 +15,7 @@ defmodule Nodulo.Api.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    Nodulo.ApiWeb.Endpoint.config_change(changed, removed)
+    Nodulo.ApiGql.Endpoint.config_change(changed, removed)
     :ok
   end
 end
