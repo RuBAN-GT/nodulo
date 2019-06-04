@@ -1,7 +1,7 @@
-defmodule Nodulo.ApiWeb.Schema.AuthType do
+defmodule Nodulo.ApiGql.Schema.AuthType do
   use Absinthe.Schema.Notation
 
-  alias Nodulo.ApiWeb.Schema.AuthResolver
+  alias Nodulo.ApiGql.Schema.AuthResolver
 
   @desc "Secret data for successfuly user authentication"
   object :user_secrets do

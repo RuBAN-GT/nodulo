@@ -1,5 +1,5 @@
-defmodule Nodulo.ApiWeb.Schema.AuthResolver do
-  alias Nodulo.ApiWeb.{SignInService, SignUpService}
+defmodule Nodulo.ApiGql.Schema.AuthResolver do
+  alias Nodulo.ApiGql.{SignInService, SignUpService}
 
   def sign_in(_parent, %{credentials: params}, _resolution) do
     {:ok, SignInService.call(params)}

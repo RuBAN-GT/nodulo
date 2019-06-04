@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.Schema.UserResolver do
+defmodule Nodulo.ApiGql.Schema.UserResolver do
 
   alias Nodulo.Bellas.User.Context
 

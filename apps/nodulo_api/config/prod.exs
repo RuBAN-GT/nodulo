@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :nodulo_api, Nodulo.ApiWeb.Endpoint,
+config :nodulo_api, Nodulo.ApiGql.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

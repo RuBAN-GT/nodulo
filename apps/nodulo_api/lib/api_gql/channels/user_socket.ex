@@ -1,8 +1,8 @@
-defmodule Nodulo.ApiWeb.UserSocket do
+defmodule Nodulo.ApiGql.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Nodulo.ApiWeb.RoomChannel
+  # channel "room:*", Nodulo.ApiGql.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
@@ -26,7 +26,7 @@ defmodule Nodulo.ApiWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     Nodulo.ApiWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     Nodulo.ApiGql.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

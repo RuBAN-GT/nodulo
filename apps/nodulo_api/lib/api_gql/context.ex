@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.Context do
+defmodule Nodulo.ApiGql.Context do
   @moduledoc """
   Plug context with cather an information about client
 

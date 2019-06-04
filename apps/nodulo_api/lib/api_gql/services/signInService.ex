@@ -1,5 +1,5 @@
-defmodule Nodulo.ApiWeb.SignInService do
-  alias Nodulo.ApiWeb.UserSecretService
+defmodule Nodulo.ApiGql.SignInService do
+  alias Nodulo.ApiGql.UserSecretService
 
   alias Nodulo.Bellas.SignInService.Credentials
   alias Nodulo.Bellas.SignInService, as: InternalSignIn

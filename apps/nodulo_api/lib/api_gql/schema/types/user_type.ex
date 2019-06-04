@@ -1,7 +1,7 @@
-defmodule Nodulo.ApiWeb.Schema.UserType do
+defmodule Nodulo.ApiGql.Schema.UserType do
   use Absinthe.Schema.Notation
 
-  alias Nodulo.ApiWeb.Schema.UserResolver
+  alias Nodulo.ApiGql.Schema.UserResolver
 
   @desc "A common user definition"
   interface :basic_user do

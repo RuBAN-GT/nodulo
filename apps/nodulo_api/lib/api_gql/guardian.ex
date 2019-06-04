@@ -1,4 +1,4 @@
-defmodule Nodulo.ApiWeb.Guardian do
+defmodule Nodulo.ApiGql.Guardian do
 
   use Guardian, otp_app: :nodulo_api
 

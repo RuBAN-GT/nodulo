@@ -1,9 +1,9 @@
-defmodule Nodulo.ApiWeb.UserSecretService do
+defmodule Nodulo.ApiGql.UserSecretService do
   @moduledoc """
   Service for generating secrets for selected user
   """
 
-  alias Nodulo.ApiWeb.Guardian
+  alias Nodulo.ApiGql.Guardian
   alias Nodulo.Bellas.User
 
   @type secrets :: String.t()

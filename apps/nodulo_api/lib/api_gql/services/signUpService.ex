@@ -1,5 +1,5 @@
-defmodule Nodulo.ApiWeb.SignUpService do
-  alias Nodulo.ApiWeb.UserSecretService
+defmodule Nodulo.ApiGql.SignUpService do
+  alias Nodulo.ApiGql.UserSecretService
   alias Nodulo.Bellas.SignUpService, as: InternalSignUp
 
   @type result_type :: String.t()

@@ -1,12 +1,12 @@
-defmodule Nodulo.ApiWeb do
+defmodule Nodulo.ApiGql do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use Nodulo.ApiWeb, :controller
-      use Nodulo.ApiWeb, :view
+      use Nodulo.ApiGql, :controller
+      use Nodulo.ApiGql, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule Nodulo.ApiWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: Nodulo.ApiWeb
+      use Phoenix.Controller, namespace: Nodulo.ApiGql
 
       import Plug.Conn
-      import Nodulo.ApiWeb.Gettext
-      alias Nodulo.ApiWeb.Router.Helpers, as: Routes
+      import Nodulo.ApiGql.Gettext
+      alias Nodulo.ApiGql.Router.Helpers, as: Routes
     end
   end
 
@@ -38,7 +38,7 @@ defmodule Nodulo.ApiWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import Nodulo.ApiWeb.Gettext
+      import Nodulo.ApiGql.Gettext
     end
   end
 
