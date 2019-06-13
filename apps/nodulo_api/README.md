@@ -1,18 +1,18 @@
 # Nodulo.Api
 
-To start your Phoenix server:
+The front application with public API over another internal apps.
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
+The core of `Nodulo.Api` is [Phoenix Framework](http://phoenixframework.org).
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Usage
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+To start your local server just run:
 
-## Learn more
+```sh
+mix phx.server
+```
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+With a default configuration an API is available at [`localhost:4000`](http://localhost:4000).
+
+If You want to work with GraphQL component,
+just go to [`/graphql`](http://localhost:4000/graphql).
