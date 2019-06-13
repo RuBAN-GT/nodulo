@@ -1,4 +1,6 @@
 defmodule Nodulo.ApiGql.Schema.AuthType do
+  @moduledoc false
+
   use Absinthe.Schema.Notation
 
   alias Nodulo.ApiGql.Schema.AuthResolver

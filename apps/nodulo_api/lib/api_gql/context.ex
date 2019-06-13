@@ -4,6 +4,7 @@ defmodule Nodulo.ApiGql.Context do
 
   @see https://hexdocs.pm/absinthe/context-and-authentication.html
   """
+
   @behaviour Plug
 
   alias Nodulo.ApiGql.Guardian

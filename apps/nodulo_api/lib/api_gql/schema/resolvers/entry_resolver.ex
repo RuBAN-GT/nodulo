@@ -1,4 +1,5 @@
 defmodule Nodulo.ApiGql.Schema.EntryResolver do
+  @moduledoc false
 
   def list_entries(_parent, _args, _resolution) do
     {:ok, Nodulo.Elisen.Factory.build_list(5, :entry)}

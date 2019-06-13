@@ -1,4 +1,6 @@
 defmodule Nodulo.ApiGql.Schema.EntryType do
+  @moduledoc false
+
   use Absinthe.Schema.Notation
   import_types Absinthe.Plug.Types
 

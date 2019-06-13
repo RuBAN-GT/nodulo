@@ -1,4 +1,6 @@
 defmodule Nodulo.ApiGql.Schema.UserType do
+  @moduledoc false
+
   use Absinthe.Schema.Notation
 
   alias Nodulo.ApiGql.Schema.UserResolver

@@ -1,4 +1,8 @@
 defmodule Nodulo.ApiGql.Schema.AuthType.UserSecrets do
+  @moduledoc """
+  Wrapper for generation Secrets struct for API
+  """
+
   @enforce_keys [:secret]
   defstruct [:secret]
 

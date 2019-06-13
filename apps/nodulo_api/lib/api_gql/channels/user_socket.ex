@@ -1,4 +1,6 @@
 defmodule Nodulo.ApiGql.UserSocket do
+  @moduledoc false
+
   use Phoenix.Socket
 
   ## Channels

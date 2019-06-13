@@ -1,6 +1,9 @@
 defmodule Nodulo.ApiGql.SignInService do
-  alias Nodulo.ApiGql.UserSecretService
+  @moduledoc """
+  Sign in service in API component
+  """
 
+  alias Nodulo.ApiGql.UserSecretService
   alias Nodulo.Bellas.SignInService.Credentials
   alias Nodulo.Bellas.SignInService, as: InternalSignIn
 

@@ -1,4 +1,8 @@
 defmodule Nodulo.ApiGql.Router do
+  @moduledoc """
+  GraphQL router component
+  """
+
   use Nodulo.ApiGql, :router
 
   pipeline :graphql do

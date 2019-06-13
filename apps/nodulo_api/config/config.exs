@@ -1,7 +1,6 @@
 use Mix.Config
 
-config :nodulo_api,
-  namespace: Nodulo.Api
+config :nodulo_api, namespace: Nodulo.Api
 
 # Configures the endpoint
 config :nodulo_api, Nodulo.ApiGql.Endpoint,

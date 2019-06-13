@@ -1,4 +1,6 @@
 defmodule Nodulo.ApiGql.Schema.AuthResolver do
+  @moduledoc false
+
   alias Nodulo.ApiGql.{SignInService, SignUpService}
   import Nodulo.ApiGql.Schema.AuthType.UserSecrets, only: [from_token: 1]
 
