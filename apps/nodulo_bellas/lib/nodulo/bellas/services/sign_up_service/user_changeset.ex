@@ -5,16 +5,15 @@ defmodule Nodulo.Bellas.SignUpService.UserChangeset do
 
   alias Ecto.Changeset
   alias Nodulo.Bellas.User
-  alias Nodulo.Bellas.User.{Generator, Validator}
+  alias Nodulo.Bellas.User.Generator
 
-  @required_fields [:email, :name, :password, :password_confirmation]
+  @required_fields [:email, :name, :password]
 
   @spec sign_up_changeset(map() | struct()) :: User.changeset()
   def sign_up_changeset(params) do
     %User{}
     |> Changeset.cast(params, @required_fields)
     |> Changeset.validate_required(@required_fields)
-    |> Validator.check_password_pair()
     |> Generator.put_encrypt_password()
   end
 end

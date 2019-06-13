@@ -1,4 +1,4 @@
-defmodule Nodulo.Bellas.SignUpServiceTest do
+defmodule Nodulo.Bellas.SignInServiceTest do
   use ExUnit.Case
   use Quixir
 
@@ -9,7 +9,7 @@ defmodule Nodulo.Bellas.SignUpServiceTest do
 
   def generate_credentials(_) do
     password = FakerElixir.Lorem.word()
-    attrs = %{password: password, password_confirmation: password}
+    attrs = %{password: password}
 
     with {:ok, %User{email: email}} <-
            Factory.params_for(:user, attrs)

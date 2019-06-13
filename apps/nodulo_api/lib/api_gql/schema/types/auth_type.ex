@@ -15,7 +15,6 @@ defmodule Nodulo.ApiGql.Schema.AuthType do
     field :email, non_null(:string)
     field :name, non_null(:string)
     field :password, non_null(:string)
-    field :password_confirmation, non_null(:string)
   end
 
   @desc "User secrets required for sign in"

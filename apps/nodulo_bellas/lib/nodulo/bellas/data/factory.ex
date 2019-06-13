@@ -16,7 +16,6 @@ defmodule Nodulo.Bellas.Factory do
       email: FakerElixir.Internet.email(),
       name: FakerElixir.Internet.user_name(),
       password: "hello_world",
-      password_confirmation: "hello_world",
       settings: []
     }
   end

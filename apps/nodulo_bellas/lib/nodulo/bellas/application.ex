@@ -1,5 +1,7 @@
 defmodule Nodulo.Bellas.Application do
-  @moduledoc false
+  @moduledoc """
+  Bellas entrypoint
+  """
 
   use Application
 
